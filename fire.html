@@ -1,0 +1,158 @@
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>
+    Shinobi Fest X
+  </title>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="./style.css">
+
+  <style>
+/* ------ scrollbar ------ */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background-color: #0d0d0d;
+}
+::-webkit-scrollbar-thumb {
+  background: #3e3e3e;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-track {
+  background-color: #0d0d0d;
+}
+  </style>
+
+</head>
+
+<body class="text-white bg-black ">
+
+  <!-- particles.js container -->
+  <header class="flex justify-between items-center  p-4 bg-black bg-opacity-0">
+
+    <div class="flex items-center space-x-4">
+      <nav class="flex space-x-6">
+        <a class="hover:text-orange-500" href="#">
+          HOME
+        </a>
+        <a class="hover:text-orange-500" href="#">
+          DOORPRIZES
+        </a>
+        <a class="hover:text-orange-500" href="#">
+          MAGICIAN
+        </a>
+        <a class="hover:text-orange-500" href="#">
+          TIMETABLE
+        </a>
+      </nav>
+    </div>
+    <div class="flex space-x-4">
+      <button class="bg-black-800 border-2 border-orange-500 px-4 py-2 rounded hover:bg-gray-700">
+        CELEBRATIONS
+      </button>
+      <button class="bg-black-800 border-2 border-orange-500 px-4 py-2 rounded hover:bg-gray-700">
+        ANNOUNCEMENTS
+      </button>
+      <button class="bg-orange-500 text-black px-4 py-2 rounded hover:bg-orange-400">
+        COUNTDOWN TIMER
+      </button>
+    </div>
+  </header>
+  
+  
+  <section id="hero-section" style="display: flex; align-items: center; justify-content: center;">
+    <div id="particles-js"></div>
+    <slot>
+      <section id="hero">
+        <main class="relative bg-cover bg-center">
+          <div class="flex h-screen flex-col items-center justify-center text-center space-y-4">
+            <h1 class="text-9xl font-bold custom-text-border">
+              THE GREAT NINJA HACKS
+            </h1>
+            <p class="text-4xl custom-text-border">
+              THE ULTIMATE HACKATHON
+            </p>
+            <button class="text-black bg-orange-500 px-6 py-3 rounded text-5xl hover:bg-orange-400">
+              REGISTER
+            </button>
+            <section id="count-up-section" class="count-up-section">
+              <div class="container">
+                <div class="row">
+                  <div class="col-xs-12" style=" display: flex; align-items: center; justify-content: center;">
+                    <div class="flipTimemodulesboxes">
+                      <div class="flipTimebox">
+                        <div class="flipclock1"></div>
+                        <div class="flipclock1message"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </main>
+      </section>
+    </slot>
+  </section>
+
+  <section id="prizepool" style="display: flex; align-items: center; justify-content: center;">
+    <slot>
+      <section id="prize" style="width: 100%; height: 100vh; background-size: cover;">
+        <main class="relative bg-black bg-cover bg-center">
+          <div class="flex h-screen flex-col items-center justify-center text-center space-y-4">
+            Prizepool
+          </div>
+        </main>
+      </section>
+    </slot>
+  </section>
+
+  <section id="schedule" style="display: flex; align-items: center; justify-content: center;">
+    <slot>
+      <section id="contact">
+        <main class="relative bg-cover bg-center">
+          <div class="flex h-screen flex-col items-center justify-center text-center space-y-4">
+            Schedule
+          </div>
+        </main>
+      </section>
+    </slot>
+  </section>
+
+  <section id="theme" style="display: flex; align-items: center; justify-content: center;">
+    <slot>
+      <section id="contact">
+        <main class="relative bg-cover bg-center">
+          <div class="flex h-screen flex-col items-center justify-center text-center space-y-4">
+            Theme
+          </div>
+        </main>
+      </section>
+    </slot>
+  </section>
+
+  <section id="contact-us" style="display: flex; align-items: center; justify-content: center;">
+    <slot>
+      <section id="contact">
+        <main class="relative bg-cover bg-center">
+          <div class="flex h-screen flex-col items-center justify-center text-center space-y-4">
+            Contact Us
+          </div>
+        </main>
+      </section>
+    </slot>
+  </section>
+
+</body>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib -->
+<script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script>
+<script src="./script.js"></script>
+
+</html>
