@@ -41,79 +41,51 @@
 
 </head>
 
-<body class="text-white bg-black ">
+<body class="text-white bg-black">
 
   <!-- particles.js container -->
-  <header class="flex justify-between items-center  p-4 bg-black bg-opacity-0">
-
+  <header class="flex justify-between items-center p-4 bg-transparent bg-opacity-0 relative z-10">
     <div class="flex items-center space-x-4">
       <nav class="flex space-x-6">
-        <a class="hover:text-orange-500" href="#home">
-          HOME
-        </a>
-        <a class="hover:text-orange-500" href="#prizepool">
-          PRIZEPOOL
-        </a>
-        <a class="hover:text-orange-500" href="#schedule">
-          SCHEDULE
-        </a>
-        <a class="hover:text-orange-500" href="#theme">
-          THEMES
-        </a>
+        <a class="hover:text-orange-500" href="#home">HOME</a>
+        <a class="hover:text-orange-500" href="#prizepool">PRIZEPOOL</a>
+        <a class="hover:text-orange-500" href="#schedule">SCHEDULE</a>
+        <a class="hover:text-orange-500" href="#theme">THEMES</a>
       </nav>
     </div>
     <div class="flex space-x-4">
-      <button class="bg-black-800 border-2 border-orange-500 px-4 py-2 rounded hover:bg-gray-700">
-        BROCHURE
-      </button>
-      <button class="bg-black-800 border-2 border-orange-500 px-4 py-2 rounded hover:bg-gray-700">
-        ANNOUNCEMENTS
-      </button>
-      <button class="bg-orange-500 text-black px-4 py-2 rounded hover:bg-orange-400">
-        REGISTRATION
-      </button>
+      <button class="bg-black-800 border-2 border-orange-500 px-4 py-2 rounded hover:bg-gray-700">BROCHURE</button>
+      <button class="bg-black-800 border-2 border-orange-500 px-4 py-2 rounded hover:bg-gray-700">ANNOUNCEMENTS</button>
+      <button class="bg-orange-500 text-black px-4 py-2 rounded hover:bg-orange-400">REGISTRATION</button>
     </div>
   </header>
 
+  <section id="home" style="display: flex; align-items: center; justify-content: center; position: relative; height: 100vh; overflow: hidden;">
 
-  <section id="home" style="display: flex; align-items: center; justify-content: center;">
-    <div id="particles-js"></div>
-    <slot>
-      <section id="hero">
-        <main class="relative bg-cover bg-center">
-          <div class="flex h-screen flex-col items-center justify-center text-center space-y-4">
-            <video autoplay muted loop id="background-video"
-              style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2;">
-              <source src="./assets/bgvid.mkv" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-            <h1 class="text-9xl font-bold custom-text-border">
-              THE GREAT NINJA HACKS
-            </h1>
-            <p class="text-4xl custom-text-border">
-              THE ULTIMATE HACKATHON
-            </p>
-            <button class="text-black bg-orange-500 px-6 py-3 rounded text-5xl hover:bg-orange-400">
-              REGISTER
-            </button>
-            <section id="count-up-section" class="count-up-section">
-              <div class="container">
-                <div class="row">
-                  <div class="col-xs-12" style=" display: flex; align-items: center; justify-content: center;">
-                    <div class="flipTimemodulesboxes">
-                      <div class="flipTimebox">
-                        <div class="flipclock1"></div>
-                        <div class="flipclock1message"></div>
-                      </div>
-                    </div>
-                  </div>
+    <video autoplay muted loop id="background-video"
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+    <source src="./assets/bgvid.mkv" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+    <div class="flex h-screen flex-col items-center justify-center text-center space-y-4">
+      <h1 class="text-[10rem] font-bold custom-text-border">THE GREAT NINJA HACKS</h1>
+      <p class="text-[3rem] custom-text-border">Code like a Shinobi, Innovate like a Hokage</p>
+      <button class="text-black bg-orange-500 px-6 py-3 rounded text-5xl hover:bg-orange-400">REGISTER</button>
+      <section id="count-up-section" class="count-up-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12" style="display: flex; align-items: center; justify-content: center;">
+              <div class="flipTimemodulesboxes">
+                <div class="flipTimebox">
+                  <div class="flipclock1"></div>
+                  <div class="flipclock1message"></div>
                 </div>
               </div>
-            </section>
+            </div>
           </div>
-        </main>
+        </div>
       </section>
-    </slot>
+    </div>
   </section>
 
   <section id="about-us" style="align-items:center; justify-content: center; width: 100%;">
@@ -349,39 +321,13 @@
   </section>
 
 
-  <section id="theme" style="display: flex; align-items: center; justify-content: center;">
-    <slot>
-      <section id="contact">
-        <main class="relative bg-cover bg-center">
-          <div class="flex h-screen flex-col items-center justify-center text-center space-y-4">
-            <div class="profile-rows">
-              <section class="wrapper">
-
-                <div class="card" data-effect="zoom">
-                  <button class="card__save  js-save" type="button">
-                    <i class="fa  fa-bookmark"></i>
-                  </button>
-                  <figure class="card__image">
-                    <img src="./assets/peakpx.jpg" alt="Short description">
-                  </figure>
-                  <div class="card__header">
-                    <figure class="card__profile">
-                      <img src="./assets/anime-fight-glowing-naruto-e7jgbzukkdqm1ci0.jpg" alt="Short description">
-                    </figure>
-                  </div>
-                  <div class="card__body">
-                    <h3 class="card__name">OPEN INNOVATION</h3>
-                  </div>
-                </div>
-
-              </section>
-            </div>
-
-          </div>
-        </main>
-      </section>
-    </slot>
-  </section>
+  <!-- <section id="theme" style="align-items: center; justify-content: center;">
+    <div class="content">
+      <h2 class="text" data-text="open innovation">
+          Open Innovation
+      </h2>
+    </div>
+  </section> -->
 
   <section id="faqs" style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: 20px;">
 
@@ -512,7 +458,19 @@
   </button>
   <!-- partial -->
 
-
+  <style>
+    @media (max-width: 768px) {
+      #home {
+        height: 50vh; /* Adjust home section height for mobile */
+      }
+      h1 {
+        font-size: 5rem; /* Adjust font size for mobile */
+      }
+      p {
+        font-size: 1.5rem; /* Adjust paragraph font size for mobile */
+      }
+    }
+  </style>
 
 </body>
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib -->
