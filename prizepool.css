@@ -7,6 +7,7 @@
     align-items: center;
     font-family: consolas;
     width: 100%;
+    background: transparent;
 }
 
 .container {
@@ -32,7 +33,7 @@
 
 .container .card .face.face1 {
     position: relative;
-    background: #333;
+    background: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,7 +42,7 @@
 }
 
 .container .card:hover .face.face1 {
-    background: #ff0057;
+    background: transparent;
     transform: translateY(0);
 }
 
@@ -67,14 +68,14 @@
 .container .card .face.face1 .content h3 {
     margin: 10px 0 0;
     padding: 0;
-    color: #fff;
+    color: transparent;
     text-align: center;
     font-size: 1.5em;
 }
 
 .container .card .face.face2 {
     position: relative;
-    background: #fff;
+    background: transparent;
     display: flex;
     justify-content: center;
     align-items: center;

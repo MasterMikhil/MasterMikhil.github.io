@@ -10,8 +10,8 @@ h1 {
 }
 
 .cont-faq {
-  background-color: white;
-  color: black;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   border-radius: 20px;
   box-shadow: 0 5px 10px 0 rgb(255, 106, 0);
   margin: 20px 0;

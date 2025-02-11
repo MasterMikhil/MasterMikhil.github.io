@@ -1,0 +1,104 @@
+/* About Us Section */
+.about-us {
+    display: flex;
+    justify-content: center;
+    padding: 50px 10%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background:transparent; /* Dark background for contrast */
+    color: white;
+    border-radius:0;
+  }
+  
+  /* Hover Effect for About Us */
+  .about-us:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 30px rgba(255, 69, 0, 0.5);
+  }
+  
+  /* Flex container for each section */
+  .about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+  }
+  
+  /* Zig-Zag Layout */
+  .about-content.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  /* Text Styling */
+  .text {
+    width: 50%;
+    text-align: left;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Text Hover Effect */
+  .text:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Gradient Text Effect (Naruto Colors) */
+  .text h3 {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #ffcc00, #ff8000, #ff4500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .text p {
+    font-size: 18px;
+    line-height: 1.5;
+    background: linear-gradient(90deg, #ffcc00, #ff8000, #ff4500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* Image Styling */
+  .image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Image Hover Effect */
+  .image img {
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 4px solid #ffcc00; /* Yellow-Golden Border */
+  }
+  
+  .image img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(255, 69, 0, 0.8);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+  
+    .about-content.reverse {
+        flex-direction: column;
+    }
+  
+    .text, .image {
+        width: 100%;
+    }
+  
+    .image img {
+        width: 200px;
+        height: 200px;
+    }
+  }

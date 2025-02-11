@@ -74,11 +74,11 @@ ul {
   display: block;
 }
 .logo.primary {
-  width: 200px;
-  min-width: 200px;
-  height: 35px;
-  min-height: 35px;
-  background: url(https://miro.medium.com/v2/resize:fit:786/format:webp/1*4YZ4tOc5oRs_Ksx-R_WFMw.png) no-repeat 50% 50%/contain;
+  width: 500px;
+  min-width: 400px;
+  height: 50px;
+  min-height: 50px;
+  background: url(./assets/gdglogo.webp) no-repeat 50% 50%/contain;
 }
 
 .footer {
