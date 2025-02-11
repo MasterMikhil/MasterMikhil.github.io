@@ -1315,3 +1315,5 @@ requestAnimationFrame(update);
             navbar.style.opacity = '0.8'; // Slightly transparent
         }
     });
+
+// FAQs JS

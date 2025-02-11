@@ -12,7 +12,10 @@
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css'>
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./card.css" />
+  <link rel="stylesheet" href="./faqs.css" />
 
+  <link rel="stylesheet" href="https://public.codepenassets.com/css/normalize-5.0.0.min.css">
+  <link rel="stylesheet" href="./footer.css">
   <style>
     /* ------ scrollbar ------ */
     ::-webkit-scrollbar {
@@ -40,7 +43,7 @@
 
     <div class="flex items-center space-x-4">
       <nav class="flex space-x-6">
-        <a class="hover:text-orange-500" href="#hero-section">
+        <a class="hover:text-orange-500" href="#home">
           HOME
         </a>
         <a class="hover:text-orange-500" href="#prizepool">
@@ -68,12 +71,17 @@
   </header>
 
 
-  <section id="hero-section" style="display: flex; align-items: center; justify-content: center;">
+  <section id="home" style="display: flex; align-items: center; justify-content: center;">
     <div id="particles-js"></div>
     <slot>
       <section id="hero">
         <main class="relative bg-cover bg-center">
           <div class="flex h-screen flex-col items-center justify-center text-center space-y-4">
+            <video autoplay muted loop id="background-video"
+              style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2;">
+              <source src="./assets/bgvid.mkv" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
             <h1 class="text-9xl font-bold custom-text-border">
               THE GREAT NINJA HACKS
             </h1>
@@ -174,13 +182,9 @@
 
   <section id="schedule" style="display: flex; align-items: center; justify-content: center;">
     <slot>
-      <section id="contact">
-        <main class="relative bg-cover bg-center">
-          <div class="flex h-screen flex-col items-center justify-center text-center space-y-4">
-            Schedule
-          </div>
-        </main>
-      </section>
+
+        Timeline
+
     </slot>
   </section>
 
@@ -219,9 +223,144 @@
     </slot>
   </section>
 
-  <footer>
+  <section id="faqs" style="display: flex; align-items: center; justify-content: center;">
+    <slot>
+      
+      <div class="faq">
+        <div class="cont-faq">
+          <div class="question">
+            How do I verify my email?
+          </div>
+          <div class="answercont">
+            <div class="answer">
+              Click the link in the verification email from verify@codepen.io (be sure to check your spam folder or
+              other email tabs if it's not in your inbox).
 
+              Or, send an email with the subject "Verify" to verify@codepen.io from the email address you use for your
+              CodePen account.<br><br>
+
+              <a href="https://blog.codepen.io/documentation/features/email-verification/#how-do-i-verify-my-email-2">How
+                to Verify Email Docs</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cont-faq">
+          <div class="question">
+            My Pen loads infinitely or crashes the browser.
+          </div>
+          <div class="answercont">
+            <div class="answer">
+              It's likely an infinite loop in JavaScript that we could not catch. To fix, add ?turn_off_js=true to the
+              end of the URL (on any page, like the Pen or Project editor, your Profile page, or the Dashboard) to
+              temporarily turn off JavaScript. When you're ready to run the JavaScript again, remove ?turn_off_js=true
+              and refresh the page.<br><br>
+
+              <a href="https://blog.codepen.io/documentation/features/turn-off-javascript-in-previews/">How to Disable
+                JavaScript Docs</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cont-faq">
+          <div class="question">
+            How do I contact the creator of a Pen?
+          </div>
+          <div class="answercont">
+            <div class="answer">
+              You can leave a comment on any public Pen. Click the "Comments" link in the Pen editor view, or visit the
+              Details page.<br><br>
+
+              <a href="https://blog.codepen.io/documentation/faq/how-do-i-contact-the-creator-of-a-pen/">How to Contact
+                Creator of a Pen Docs</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cont-faq">
+          <div class="question">
+            What version of [library] does CodePen use?
+          </div>
+          <div class="answercont">
+            <div class="answer">
+              We have our current list of library versions <a href="https://codepen.io/versions">here</a>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="cont-faq">
+          <div class="question">
+            What are forks?
+          </div>
+          <div class="answercont">
+            <div class="answer">
+              A fork is a complete copy of a Pen or Project that you can save to your own account and modify. Your
+              forked copy comes with everything the original author wrote, including all of the code and any
+              dependencies.<br><br>
+              <a href="https://blog.codepen.io/documentation/features/forks/">Learn More About Forks</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </slot>
+  </section>
+
+  <footer class="section footer">
+    <div class="footer__header">
+      <a href="/" class="footer__logo">
+        <span class="logo primary"></span>
+      </a>
+      <ul class="social">
+        <li class="social__item">
+          <a href="#" target="_blank" class="btn social">
+            <span class="icon twitter"></span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" target="_blank" class="btn social">
+            <span class="icon youtube"></span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" target="_blank" class="btn social">
+            <span class="icon telegram"></span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" target="_blank" class="btn social">
+            <span class="icon whatsapp"></span>
+          </a>
+        </li>
+      </ul>
+      <button type="button" class="btn icon">
+        <span class="icon drop-up"></span>
+      </button>
+    </div>
+    <ul class="footer__list">
+      <li class="footer__item">
+        <a href="#home" class="footer__link">Home</a>
+      </li>
+      <li class="footer__item">
+        <a href="#prizepool" class="footer__link">Prizepool</a>
+      </li>
+      <li class="footer__item">
+        <a href="#schedule" class="footer__link">Schedule</a>
+      </li>
+      <li class="footer__item">
+        <a href="#theme" class="footer__link">Theme</a>
+      </li>
+    </ul>
+    <div class="footer__copyright">
+      <p class="desc copyright">© All rights reserved.</p>
+    </div>
   </footer>
+  <button type="button" class="btn icon">
+    <span class="icon drop-up"></span>
+  </button>
+  <!-- partial -->
+
 
 
 </body>
@@ -230,5 +369,6 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script>
 <script src="./script.js"></script>
-
+<script src="./faqs.js"></script>
+<script src="./footer.js"></script>
 </html>
