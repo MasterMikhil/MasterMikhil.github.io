@@ -51,6 +51,27 @@ text-shadow:
   }
 }
 
+
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column; /* Stack cards vertically */
+      align-items: center; /* Center cards horizontally */
+      width: 100%; /* Full width on mobile */
+      padding: 20px; /* Add padding for better spacing */
+  }
+
+  .container .card {
+      width: 100%; /* Full width on mobile */
+      margin-bottom: 20px; /* Add space between stacked cards */
+  }
+
+  .container .card .face {
+      width: 100%; /* Full width on mobile */
+  }
+}
+
 /* ----- Footer ----- */
 
 
