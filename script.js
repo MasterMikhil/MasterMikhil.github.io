@@ -401,7 +401,7 @@ var FlipClock;
       createListItem: function(a, b) {
         return [
           '<li class="' + (a ? a : "") + '">',
-          '<a href="#">',
+          '<a>',
           '<div class="up">',
           '<div class="shadow"></div>',
           '<div class="inn">' + (b ? b : "") + "</div>",
@@ -843,7 +843,7 @@ var FlipClock;
             [
               '<ul class="flip-clock-meridium">',
               "<li>",
-              '<a href="#">' + this.meridiumText + "</a>",
+              '<a>' + this.meridiumText + "</a>",
               "</li>",
               "</ul>"
             ].join("")
@@ -1069,7 +1069,7 @@ document.addEventListener("touchstart", function() {}, false);
   "use strict";
   var dt = new Date();
   var cts = Math.ceil(new Date().getTime() / 1000);
-  var dt1 = "02/10/" + dt.getFullYear() + " 00:00:01 am +0000";
+  var dt1 = "02/18/" + dt.getFullYear() + " 00:00:01 am +0000";
   var dtClock1 = Math.ceil(new Date(dt1).getTime() / 1000);
   var flipTimeboxSeconds1 = Math.ceil(dtClock1 - cts);
   var dt2 = "01/01/" + (dt.getFullYear() + 1) + " 00:00:01 am +0000";
