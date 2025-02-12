@@ -19,13 +19,15 @@
   font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1440 - 320)));
   line-height: 1.2;
 }
+
 *:before, *:after {
   box-sizing: inherit;
 }
 
-body {
+.section footer {
   position: relative;
 }
+
 @media screen and (min-width: 768px) {
   body > .btn.icon {
     display: none;

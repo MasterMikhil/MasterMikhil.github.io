@@ -44,7 +44,7 @@
 <body class="text-white bg-black">
 
   <!-- particles.js container -->
-  <header class="flex justify-between items-center p-4 bg-transparent bg-opacity-0 relative z-10">
+  <header class="flex justify-between items-center p-4 bg-transparent bg-opacity-50 relative z-10">
     <div class="flex items-center space-x-4">
       <nav class="flex space-x-6">
         <a class="hover:text-orange-500" href="#home">HOME</a>
@@ -60,16 +60,19 @@
     </div>
   </header>
 
-  <section id="home" style="display: flex; align-items: center; justify-content: center; position: relative; height: 100vh; overflow: hidden;">
+  <section id="home"
+    style="display: flex; align-items: center; justify-content: center; position: relative; height: 100vh; overflow: hidden;">
+
+    <div id="particles-js"></div>
 
     <video autoplay muted loop id="background-video"
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
-    <source src="./assets/bgvid.mkv" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2;">
+      <source src="./assets/bgvid.mkv" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
     <div class="flex h-screen flex-col items-center justify-center text-center space-y-4">
-      <h1 class="text-[10rem] font-bold custom-text-border">THE GREAT NINJA HACKS</h1>
-      <p class="text-[3rem] custom-text-border">Code like a Shinobi, Innovate like a Hokage</p>
+      <h1 class="text-[7vw] font-bold custom-text-border">THE GREAT NINJA HACKS</h1>
+      <p class="text-[2vw] custom-text-border">Code like a Shinobi, Innovate like a Hokage</p>
       <button class="text-black bg-orange-500 px-6 py-3 rounded text-5xl hover:bg-orange-400">REGISTER</button>
       <section id="count-up-section" class="count-up-section">
         <div class="container">
@@ -90,26 +93,48 @@
 
   <section id="about-us" style="align-items:center; justify-content: center; width: 100%;">
     <slot>
+      <div style="height: 5vh;"></div>
+
       <section class="about-us">
         <div class="text">
-            <h3>Google Developer Groups DYPCET</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-               Nulla facilisi. Phasellus nec risus nec massa bibendum varius.</p>
-        </div>
-        <div class="image">
-            <img src="./assets/img_gdg.jpg" alt="gdg dypcet kolhapur">
+
+          <p>Step into The Great Ninja Hack, where innovation meets battle! This 24-hour open innovation hackathon is
+            your chance to test your creativity, problem-solving skills, and technical prowess. Whether you're a
+            seasoned warrior of code or an up-and-coming tech ninja, this is the ultimate battleground to transform
+            ideas into reality.
+            <br>
+            <br>
+            Sharpen your skills, forge alliances, and tackle real-world challenges as you compete for glory and a
+            ₹50,000 prize pool. Even if you've never heard of a Hokage, one thing is clear—this is your moment to rise
+            as the ultimate innovator!
+            Logo
+          </p>
         </div>
       </section>
-      
+
+      <div style="height: 10vh;"></div>
+
+      <section class="about-us">
+        <div class="text">
+          <h3>Google Developer Groups DYPCET</h3>
+          <p>LorOrganized under: Google Developer Groups (GDG) on Campus DYPCET          </p>
+        </div>
+        <div class="image">
+          <img src="./assets/img_gdg.jpg" alt="gdg dypcet kolhapur">
+        </div>
+      </section>
+
+      <div style="height: 10vh;"></div>
+
       <section class="about-us reverse">
-          <div class="image">
-              <img src="./assets/img_dyp.jpg" alt="dypcet kolhapur">
-          </div>
-          <div class="text">
-              <h3>DY Patil, Kolhapur</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Donec venenatis lacus id lacus venenatis, id interdum urna pharetra.</p>
-          </div>
+        <div class="image">
+          <img src="./assets/img_dyp.jpg" alt="dypcet kolhapur">
+        </div>
+        <div class="text">
+          <h3>DY Patil, Kolhapur</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Donec venenatis lacus id lacus venenatis, id interdum urna pharetra.</p>
+        </div>
       </section>
     </slot>
   </section>
@@ -165,7 +190,7 @@
     </slot>
   </section>
 
-  <section id="schedule" style="display: flex; align-items: center; justify-content: center;">
+  <section id="schedule" style="">
     <slot>
       <div class="page-wrapper">
         <div class="section-timeline-heading">
@@ -173,13 +198,22 @@
             <div class="padding-vertical-xlarge">
               <div class="timeline-main_heading-wrapper">
                 <div class="margin-bottom-medium">
-                  <h2>The Rise of Electric Vehicles</h2>
+                  <div class="content">
+                    <h2 class="text" data-text="open innovation">
+                      open innovation
+                    </h2>
+                  </div>
                 </div>
                 <p class="paragraph-large">
-                  The electric vehicle (EV) revolution began with small, incremental
-                  steps. <br />This timeline tracks key moments in the development
-                  of
-                  electric cars and the global push towards sustainability.
+                  The Great Ninja Hack, a 24-hour open innovation hackathon where creativity, resilience, and innovation
+                  take center stage!
+                  <br><br>
+                  Think beyond boundaries, build revolutionary solutions, and challenge yourself in a high-energy coding
+                  showdown.
+                  <br><br>
+                  Whether you're a seasoned developer or just starting your coding journey, this is your moment to prove
+                  your skills!
+                  <br><br><br>
                 </p>
               </div>
             </div>
@@ -191,9 +225,10 @@
               <div class="timeline_progress">
                 <div class="timeline_progress-bar"></div>
               </div>
+
               <div class="timeline_item">
                 <div class="timeline_left">
-                  <div class="timeline_date-text">January 2010</div>
+                  <div class="timeline_date-text">12th Feb, 2025</div>
                 </div>
                 <div class="timeline_centre">
                   <div class="timeline_circle"></div>
@@ -201,19 +236,19 @@
                 <div class="timeline_right">
                   <div class="margin-bottom-xlarge">
                     <div class="timeline_text">
-                      Tesla introduces its first electric car, the Roadster, showing
-                      the world the potential of electric vehicles with a range of
-                      over 200 miles.
+                      Registration Opens at 6:00 am.
                     </div>
                   </div>
                   <div class="timeline_image-wrapper">
-                    <img src="https://imageio.forbes.com/specials-images/imageserve/6335d236f4ddc58b72592c39//960x0.jpg" loading="lazy" width="480" alt="Tesla Roadster" />
+                    <img src=""
+                      loading="lazy" alt="" />
                   </div>
                 </div>
               </div>
+
               <div class="timeline_item">
                 <div class="timeline_left">
-                  <div class="timeline_date-text">March 2015</div>
+                  <div class="timeline_date-text">12th - 17th Feb, 2025</div>
                 </div>
                 <div class="timeline_centre">
                   <div class="timeline_circle"></div>
@@ -221,19 +256,19 @@
                 <div class="timeline_right">
                   <div class="margin-bottom-medium">
                     <div class="timeline_text">
-                      The Chevy Bolt EV is launched, providing an affordable
-                      alternative to Tesla's luxury offerings, and pushing the
-                      industry closer to mass-market electric vehicles.
+                      Submit your Idea presentation before registration ends.
                     </div>
                   </div>
                   <div class="timeline_image-wrapper">
-                    <img src="https://imageio.forbes.com/specials-images/imageserve/6335d2c49044f4bf8e4becc0//960x0.jpg" loading="lazy" width="480" alt="Chevy Bolt EV" />
+                    <img src=""
+                      loading="lazy" alt="" />
                   </div>
                 </div>
               </div>
+
               <div class="timeline_item">
                 <div class="timeline_left">
-                  <div class="timeline_date-text">July 2020</div>
+                  <div class="timeline_date-text">17th Feb, 2025</div>
                 </div>
                 <div class="timeline_centre">
                   <div class="timeline_circle"></div>
@@ -241,27 +276,44 @@
                 <div class="timeline_right">
                   <div class="margin-bottom-medium">
                     <div class="timeline_text">
-                      Governments around the world, including the EU and the US,
-                      announce ambitious goals for the phase-out of gas-powered
-                      vehicles, further accelerating the electric vehicle
-                      transition.
+                      Registration Ends at 12:00 pm.
+                    </div>
+                  </div>
+                  <div class="timeline_image-wrapper">
+                    <img src=""
+                      loading="lazy" alt="" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="timeline_item">
+                <div class="timeline_left">
+                  <div class="timeline_date-text">18th Feb, 2025</div>
+                </div>
+                <div class="timeline_centre">
+                  <div class="timeline_circle"></div>
+                </div>
+                <div class="timeline_right">
+                  <div class="margin-bottom-medium">
+                    <div class="timeline_text">
+                      Announcement of Shortlisted Teams.
                     </div>
                   </div>
                   <div class="margin-bottom-xlarge">
                     <p class="text-colour-lightgrey">
-                      Countries like Norway plan to ban the sale of new internal
-                      combustion engine vehicles by 2025, promoting EV adoption as a
-                      critical environmental initiative.
+                      Teams will be Shortlisted on the basis of idea submitted.
                     </p>
                   </div>
                   <div class="timeline_image-wrapper margin-bottom-medium">
-                    <img src="https://imageio.forbes.com/specials-images/imageserve/6335d4e2fb9864af06377afd//960x0.jpg" loading="lazy" width="480" alt="Government EV Announcement" />
+                    <img src=""
+                      loading="lazy" alt="" />
                   </div>
                 </div>
               </div>
+
               <div class="timeline_item">
                 <div class="timeline_left">
-                  <div class="timeline_date-text">February 2021</div>
+                  <div class="timeline_date-text">22nd Feb, 2025</div>
                 </div>
                 <div class="timeline_centre">
                   <div class="timeline_circle"></div>
@@ -269,27 +321,19 @@
                 <div class="timeline_right">
                   <div class="margin-bottom-medium">
                     <div class="timeline_text">
-                      Tesla achieves a milestone of producing over 1 million
-                      vehicles,
-                      cementing its position as the leader in the electric vehicle
-                      market.
-                    </div>
-                  </div>
-                  <div class="margin-bottom-xlarge">
-                    <div class="inline-block">
-                      <a href="https://www.tesla.com" target="_blank" class="timeline_link inline-block">
-                        Tesla's achievements
-                      </a>
+                      Hackathon Event starts on 22nd February 2025 at 10:00 AM and runs for 24 hrous.
                     </div>
                   </div>
                   <div class="timeline_image-wrapper margin-bottom-medium">
-                    <img src="https://imageio.forbes.com/specials-images/imageserve/6335d3b738b890b16d377aff//960x0.jpg" loading="lazy" width="480" alt="Tesla Milestone" />
+                    <img src=""
+                      loading="lazy"  alt="" />
                   </div>
                 </div>
               </div>
+
               <div class="timeline_item">
                 <div class="timeline_left">
-                  <div class="timeline_date-text">October 2022</div>
+                  <div class="timeline_date-text">23rd Feb, 2025</div>
                 </div>
                 <div class="timeline_centre">
                   <div class="timeline_circle"></div>
@@ -297,42 +341,30 @@
                 <div class="timeline_right">
                   <div class="margin-bottom-medium">
                     <div class="timeline_text">
-                      Electric vehicles make up more than 10% of global vehicle
-                      sales,
-                      marking a significant milestone in the transition to greener
-                      transportation.
+                      Hackathon event ends.
                     </div>
                   </div>
                   <div class="timeline_image-wrapper">
-                    <img src="https://imageio.forbes.com/specials-images/imageserve/62c59c93a89b61113849c82f//960x0.jpg" loading="lazy" width="480" alt="Electric Vehicle Sales Milestone" />
+                    <img src=""
+                      loading="lazy"  alt="" />
                   </div>
                 </div>
               </div>
+
               <div class="overlay-fade-top"></div>
               <div class="overlay-fade-bottom"></div>
             </div>
           </div>
-      
-          <div style="height: 50vh;"></div>
+          <div style="height: 20vh;"></div>
         </div>
       </div>
-
     </slot>
   </section>
 
 
-  <!-- <section id="theme" style="align-items: center; justify-content: center;">
-    <div class="content">
-      <h2 class="text" data-text="open innovation">
-          Open Innovation
-      </h2>
-    </div>
-  </section> -->
-
   <section id="faqs" style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: 20px;">
-
     <slot>
-      FAQs
+      <h1> FAQs </h1>
       <div class="faq">
         <div class="cont-faq">
           <div class="question">
@@ -340,8 +372,10 @@
           </div>
           <div class="answercont">
             <div class="answer">
-              The Great Ninja Hack is a 24-hour open innovation hackathon designed to challenge participants' creativity, 
-              technical skills, and problem-solving abilities. It offers a competitive platform where individuals or teams can 
+              The Great Ninja Hack is a 24-hour open innovation hackathon designed to challenge participants'
+              creativity,
+              technical skills, and problem-solving abilities. It offers a competitive platform where individuals or
+              teams can
               develop innovative solutions and compete for a ₹50,000 prize pool.
 
             </div>
@@ -355,7 +389,7 @@
           </div>
           <div class="answercont">
             <div class="answer">
-              The hackathon will take place from 22nd to 23rd February 2025. 
+              The hackathon will take place from 22nd to 23rd February 2025.
               The event starts at 10:00 AM on 22nd February and runs continuously for 24 hours.
             </div>
           </div>
@@ -367,8 +401,9 @@
           </div>
           <div class="answercont">
             <div class="answer">
-              Participants must register between 12th February 2025 (6:00 AM) and 17th February 2025 (12:00 PM). 
-              Additionally, teams need to submit their idea presentations before the registration deadline. Shortlisted teams 
+              Participants must register between 12th February 2025 (6:00 AM) and 17th February 2025 (12:00 PM).
+              Additionally, teams need to submit their idea presentations before the registration deadline. Shortlisted
+              teams
               will be announced on 18th February 2025 at 12:00 PM.
             </div>
           </div>
@@ -380,7 +415,8 @@
           </div>
           <div class="answercont">
             <div class="answer">
-              The total prize pool for The Great Ninja Hack is ₹50,000, which will be awarded to top-performing teams based on 
+              The total prize pool for The Great Ninja Hack is ₹50,000, which will be awarded to top-performing teams
+              based on
               their project quality and innovation.
             </div>
           </div>
@@ -393,7 +429,8 @@
           </div>
           <div class="answercont">
             <div class="answer">
-              The hackathon follows an Open Innovation theme, allowing participants to work on any creative and impactful idea 
+              The hackathon follows an Open Innovation theme, allowing participants to work on any creative and
+              impactful idea
               that aligns with real-world problem-solving.
             </div>
           </div>
@@ -461,13 +498,18 @@
   <style>
     @media (max-width: 768px) {
       #home {
-        height: 50vh; /* Adjust home section height for mobile */
+        height: 50vh;
+        /* Adjust home section height for mobile */
       }
+
       h1 {
-        font-size: 5rem; /* Adjust font size for mobile */
+        font-size: 5rem;
+        /* Adjust font size for mobile */
       }
+
       p {
-        font-size: 1.5rem; /* Adjust paragraph font size for mobile */
+        font-size: 1.5rem;
+        /* Adjust paragraph font size for mobile */
       }
     }
   </style>
@@ -480,4 +522,5 @@
 <script src="./script.js"></script>
 <script src="./faqs.js"></script>
 <script src="./footer.js"></script>
+
 </html>
